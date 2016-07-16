@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+  <node componentName="tOracleRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="2560">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tOracleRow_5"/>
+    <elementParameter field="TEXT" name="LABEL" value="TMP"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <metadata connector="FLOW" label="TABLE_NAME" name="tOracleRow_5"/>
+    <metadata connector="REJECT" label="TABLE_NAME" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="2400">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tOracleOutput_1"/>
+    <elementParameter field="TEXT" name="LABEL" value="TMP"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Sample Comments"/>
+  </node>
+  <node componentName="tSetGlobalVar" componentVersion="0.101" offsetLabelX="-10" offsetLabelY="3" posX="160" posY="1600">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSetGlobalVar_4"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="D:\Talend-Studio\configuration\lib\java"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Sample Comment"/>
+    <metadata connector="FLOW" label="PARAM" name="tSetGlobalVar_4">
+      <column comment="" key="false" length="5" name="VAR_NAME" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="2720">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_6"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="D:\Talend-Studio\configuration\lib\java"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="true"/>
+    <elementParameter field="MEMO" name="COMMENT" value="Sample Comment"/>
+  </node>
+</talendfile:ProcessType>
